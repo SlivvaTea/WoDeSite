@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{ 
+    font-family: 'Koh Santepheap', cursive;
+    overflow: hidden;
+    margin: 0;
+    background: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+
+}
+.card{
+    height: 80vh;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+    color: black;
+    flex: 1; /*для растягивания элемента */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 650ms ease-in-out;
+}
+.card h3{
+    position: absolute;
+    font-size: 34px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.card.active{
+    flex: 10;
+}
+.card.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
